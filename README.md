@@ -17,20 +17,22 @@ PokeDex es una aplicación web que permite a los usuarios explorar el mundo Pok�
 
 ## 🛠️ Tareas del Examen
 
-### Parte 1: Setup Inicial (15 min)
+### Parte 1: Setup Inicial
 
 1. **Instalación y configuración**
    - Clona el repositorio
    - Instala las dependencias con `npm install`
    - Ejecuta el proyecto con `npm run dev`
    - Verifica que la aplicación funcione correctamente
+   - Acceso a los diseños en Figma: https://www.figma.com/design/TSdHT1wMVoJwsRaLf8djRD/Casos-entrevistas
+   - Si no tenes permisos por favor hacenos saber mandandome un mail a jbadano@nilo-labs.com
 
-### Parte 2: Primeros pasos
+### Parte 2: Diseño de la aplicación
 
 2. **Layout & Navegación**
 
    - La aplicación consiste en 2 páginas, la home (ruta /) y la página de pokemones vistos (ruta /seen)
-   - Diseñar el header como en la imagen de abajo. Al scrollear por una página el mismo debe quedar fijo
+   - Diseñar el header basado en el diseño en Figma. Al scrollear por una página el mismo debe quedar fijo
    - La aplicación debe ser responsive como se muestra en las imágenes a continuación
 
 <img src="doc/1-home-mobile.png" alt="Home Mobile" height="250" > <img src="doc/2-home-md.png" alt="Home MD" height="250" >
@@ -46,7 +48,7 @@ PokeDex es una aplicación web que permite a los usuarios explorar el mundo Pok�
      Nota: Este listado se almacenará en el navegador, por ende cuando refresquemos la página debería mantenerlo.
    - Al escribir en el cuadro de búsqueda debería filtrar los pokemones al menos por nombre
 
-     <img src="doc/4-home-search.png" alt="Búsqueda" width="250" > <img src="doc/5-home-markAsSeen.png" alt="Visto" width="250" >
+     <img src="doc/4-home-search.png" alt="Búsqueda" width="250" >
 
 4. **Pokemones vistos /seen**
 
@@ -62,7 +64,9 @@ PokeDex es una aplicación web que permite a los usuarios explorar el mundo Pok�
    - Debouncer: Usar el cuadro de búsqueda para filtrar a medida que se va escribiendo, implementar un delay para buscar solo cuando el usuario termine de escribir
    - Infinite Scroll: Implementar un sistema de paginado que a medida que vamos scrolleando hacia abajo busque más resultados y los agregue a la lista.
    - 404 y 500: Implementa las páginas de error 404 y 500.
-   - Implementa animaciones. Cuando se hace hover en una card, cuando se clickea el botón "Seen"
+   - Implementar un banner, cuando se agregue un pokemon se mostrará un banner flotando en la pantalla que indique que se agregó un pokemon al listado.
+
+      <img src="doc/8-home-banner.png" alt="Banner" width="250" >
 
 ## 📚 API GraphQL
 
@@ -107,6 +111,7 @@ npm run lint
 - **Piensa en la experiencia del usuario** - Considera estados de carga, errores, y casos edge
 - **Mantén el código limpio** - Usa nombres descriptivos y mantén funciones pequeñas
 - **Aprovecha Tailwind CSS** - Usa las clases utilitarias para crear interfaces consistentes, se valorará que se respete el diseño.
+- **Estate atento a los detalles** - Revisa los detalles en Figma para que la aplicación cumpla fielmente con los diseños. https://www.figma.com/design/TSdHT1wMVoJwsRaLf8djRD/Casos-entrevistas
 
 ## 🆘 ¿Necesitas Ayuda?
 
@@ -118,5 +123,7 @@ Si tienes problemas técnicos o preguntas sobre el enunciado, no dudes en pregun
 - [API GraphQL Pokémon](https://github.com/favware/graphql-pokemon)
 
 ## ⏰ Tiempo Estimado: 7 días
+
+Cualquier consulta o si necesitas más tiempo escribime a jbadano@nilo-labs.com
 
 ¡Buena suerte y que disfrutes construyendo el PokeDex! 🚀✨
