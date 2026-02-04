@@ -1,0 +1,28 @@
+overwrite: true
+schema: https://graphqlpokemon.favware.tech/v8
+documents: src/apollo/documents/**/*.graphql
+
+generates:
+  src/apollo/gql/types.ts:
+    plugins:
+      - typescript
+    config:
+      scalars:
+        Long: number
+
+  src/apollo/gql:
+    preset: near-operation-file
+    presetConfig:
+      extension: .generated.tsx
+      baseTypesPath: ./types.ts
+      folder: ../gql
+    plugins:
+      - typescript-operations
+      - typescript-react-apollo
+    config:
+      scalars:
+        Long: number
+      withHooks: true
+      withComponent: false
+      withHOC: false
+      useTypeImports: true

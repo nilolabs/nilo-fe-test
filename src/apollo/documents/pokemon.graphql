@@ -1,0 +1,19 @@
+query GetAllPokemon(
+  $offset: Int
+  $take: Int
+  $reverse: Boolean
+  $offsetFlavorTexts: Int
+  $takeFlavorTexts: Int
+  $reverseFlavorTexts: Boolean
+) {
+  getAllPokemon(
+    offset: $offset
+    take: $take
+    reverse: $reverse
+    offsetFlavorTexts: $offsetFlavorTexts
+    takeFlavorTexts: $takeFlavorTexts
+    reverseFlavorTexts: $reverseFlavorTexts
+  ) {
+    key
+  }
+}
